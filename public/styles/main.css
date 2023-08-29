@@ -1,0 +1,90 @@
+/* public/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+.completed{
+    text-decoration: line-through;
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    position: relative;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+label.container input:checked ~ .checkmark {
+    border-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #2196F3;
+}
+
+label.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+span.task {
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+span.completed {
+    text-decoration: line-through;
+    color: #888;
+    opacity: 0.6;
+}
+
+form {
+    display: flex;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #2196F3;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}

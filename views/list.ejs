@@ -1,0 +1,24 @@
+ <%- include("partials/header.ejs") %>
+
+    <h1><%= Todaysday %></h1>
+    <ul>
+    <% for (let i = 0; i < tasks.length; i++) { %>
+        <li>
+    <label class="container">
+        <input type="checkbox" <%= tasks[i].completed ? 'checked' : '' %> onchange="handleCheckboxChange(<%= i %>)">
+        <span <%= tasks[i].completed ? 'class="completed"' : '' %>><%= tasks[i].name %></span>
+        <span class="checkmark"></span> <!-- This adds the checkmark element -->
+    </label>
+</li>
+
+    <% } %>
+</ul>
+    
+    <form action="/" method="post">
+        <input type="text" name="newItem" autocomplete="off">
+        <button type="submit">Add</button>
+    </form>
+
+    <%- include("partials/footer.ejs") %>
+
+    <script src="app.js"></script>
